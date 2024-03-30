@@ -1,12 +1,16 @@
 .main-navigation {
 	display: block;
 	width: 100%;
+	background-color: palegoldenrod;
+	
 
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		list-style: none;
+		justify-content: center;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -60,6 +64,8 @@
 	a {
 		display: block;
 		text-decoration: none;
+		padding: 20px;
+    	margin: 5px;
 	}
 
 	.current_page_item > a,
