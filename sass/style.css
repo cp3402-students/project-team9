@@ -493,6 +493,9 @@ body .site-branding .site-description {
   font-size: 20px; /* Adjust as needed */
   text-align: center;
 }
+body .site-main {
+  height: 100vh;
+}
 body .site-header {
   background-color: gold;
 }
