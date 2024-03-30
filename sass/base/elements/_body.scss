@@ -1,3 +1,25 @@
+html, body{
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
 body {
-	background: $color__background-body; // Fallback for when there is no custom background color defined.
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: $color__background-body;
+
+	.site-header{
+		background-color: $color_background-header;
+	}
+	
+	.site-footer{
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: auto;
+		text-align: center;
+		background: $color_background-footer;
+	}
 }
