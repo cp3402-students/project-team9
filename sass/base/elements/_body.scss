@@ -42,7 +42,6 @@ body {
 	.site-header{
 		background-color: $color_background-header;
 	}
-
 	.site-footer{
 		height: 100px;
 		display: flex;
@@ -51,5 +50,11 @@ body {
 		margin-top: auto;
 		text-align: center;
 		background: $color_background-footer;
+	}
+	.entry-footer{
+		display: none;
+	}
+	.entry-title{
+		display: none;
 	}
 }

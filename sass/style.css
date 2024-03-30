@@ -505,6 +505,12 @@ body .site-footer {
   text-align: center;
   background: gold;
 }
+body .entry-footer {
+  display: none;
+}
+body .entry-title {
+  display: none;
+}
 
 hr {
   background-color: #ccc;
@@ -789,6 +795,10 @@ textarea {
 }
 .widget select {
   max-width: 100%;
+}
+
+.widget-area {
+  display: none;
 }
 
 /* Media
