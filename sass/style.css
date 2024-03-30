@@ -403,9 +403,8 @@ h6 {
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin: 10px;
 }
-
 dfn,
 cite,
 em,
@@ -467,6 +466,32 @@ body {
   display: flex;
   flex-direction: column;
   background-color: lemonchiffon;
+}
+body .site-branding {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  grid-template-rows: auto; /* Single row */
+  padding: 10px;
+  align-items: center; /* Align items vertically */
+}
+body .site-branding .site-logo {
+  max-width: fit-content;
+}
+body .site-branding .site-logo img {
+  max-height: 100px;
+  max-width: max-content;
+}
+body .site-branding .title-and-description {
+  grid-column: 2; /* Place the title and description in the second column */
+  text-align: center; /* Center align the title and description */
+}
+body .site-branding .site-title {
+  font-size: 30px;
+  text-align: center;
+}
+body .site-branding .site-description {
+  font-size: 20px; /* Adjust as needed */
+  text-align: center;
 }
 body .site-header {
   background-color: gold;

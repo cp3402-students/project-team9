@@ -9,10 +9,40 @@ body {
 	flex-direction: column;
 	background-color: $color__background-body;
 
+	.site-branding {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+		grid-template-rows: auto; /* Single row */
+		padding: 10px;
+		align-items: center; /* Align items vertically */
+
+		.site-logo{
+			max-width: fit-content;
+		}
+		
+		.site-logo img{
+			max-height: 100px;
+			max-width: max-content;
+		}
+		.title-and-description {
+			grid-column: 2; /* Place the title and description in the second column */
+			text-align: center; /* Center align the title and description */
+			}
+			.site-title {
+			font-size: 30px;
+			text-align: center;
+			}
+		
+			.site-description {
+			font-size: 20px; /* Adjust as needed */
+			text-align: center;
+			}	  
+		}
+
 	.site-header{
 		background-color: $color_background-header;
 	}
-	
+
 	.site-footer{
 		height: 100px;
 		display: flex;
