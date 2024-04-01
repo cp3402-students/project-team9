@@ -9,11 +9,18 @@ jobs:
   deploy:
     name: Deploy Theme
     runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 20
 
     steps:
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
       - name: Checkout code
         uses: actions/checkout@v2
-      
+
       - name: Deploy to server
         uses: easingthemes/ssh-deploy@v5.0.3
         with:
