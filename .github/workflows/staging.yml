@@ -9,24 +9,16 @@ jobs:
   deploy:
     name: Deploy Theme
     runs-on: ubuntu-latest
-    env:
-      NODE_VERSION: 20
-
     steps:
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Deploy to server
-        uses: easingthemes/ssh-deploy@v5.0.3
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@7.0.1
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-rlgoDzvc -i"
-          SOURCE: "./"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: "/var/www/html/wordpress/wp-content/themes"
+          switches: "-rlgoDzvc -i"
+          path: "./"
+          remote_path: "/var/www/html/wordpress/wp-content/themes"
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
