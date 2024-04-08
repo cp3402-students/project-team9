@@ -138,7 +138,7 @@ add_action( 'widgets_init', '_s_widgets_init' );
  * Enqueue scripts and styles.
  */
 function _s_scripts() {
-	wp_enqueue_style( '_s-style', get_template_directory_uri() . './sass/style.css', array(), _S_VERSION );
+	wp_enqueue_style( '_s-style', get_template_directory_uri() . '/sass/style.css', array(), _S_VERSION );
 	wp_style_add_data( '_s-style', 'rtl', 'replace' );
 
 	wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
