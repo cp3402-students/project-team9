@@ -1,62 +1,139 @@
-html, body{
+//need to clean this up and remove/move unnecessary elements at some point
+html,
+body {
 	height: 100vh;
 	margin: 0;
 	padding: 0;
+	font-family: var(--bs-body-font-family);
 }
+
+body .col {
+	display: inline-grid;
+}
+
 body {
+
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	background-color: $color__background-body;
+	background-color: white;
 
-	.site-branding {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-		grid-template-rows: auto; /* Single row */
-		padding: 10px;
-		align-items: center; /* Align items vertically */
+	.site-header {
+		background-color: #023c5c;
+		min-height: 50px;
 
-		.site-logo{
-			max-width: fit-content;
-		}
-		
-		.site-logo img{
-			max-height: 100px;
-			max-width: max-content;
-		}
-		.title-and-description {
-			grid-column: 2; /* Place the title and description in the second column */
-			text-align: center; /* Center align the title and description */
-			}
-			.site-title {
-			font-size: 30px;
-			text-align: center;
-			}
-		
-			.site-description {
-			font-size: 20px; /* Adjust as needed */
-			text-align: center;
-			}	  
-		}
-	.site-main{
+	}
+
+	.main-navigation {
+		background-color: #22547D !important;
+		color: white;
+	}
+
+	.site-main {
 		height: 100vh;
+
+		.container-fluid {
+			text-align: center;
+
+			.col-md-8 {
+				margin-bottom: 25px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: left;
+
+				.fs-4 {
+					padding: 10px;
+				}
+			}
+		}
 	}
-	.site-header{
-		background-color: $color_background-header;
-	}
-	.site-footer{
+
+	.site-footer {
 		height: 100px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		margin-top: auto;
 		text-align: center;
-		background: $color_background-footer;
+		background-color: #e0e3e8;
 	}
-	.entry-footer{
-		display: none;
+
+	.navbar-brand {
+		margin-left: 20px;
 	}
-	.entry-title{
-		display: none;
+
+	.row {
+		width: max-content;
 	}
+
+	.col {
+		display: flex;
+	}
+
+	.col-auto {
+		display: flex;
+		padding: 0;
+	}
+
+	.nav-bar .nav-item {
+		display: flex;
+	}
+
+	.navbar-nav .nav-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		color: white;
+	}
+
+	.navbar-toggler:focus,
+	.navbar-toggler:active,
+	.navbar-toggler-icon:focus {
+		outline: none !important;
+		box-shadow: none !important;
+		border-color: transparent !important;
+	}
+
+	.navbar-toggler {
+		border-color: transparent !important;
+	}
+
+	.offcanvas-body {
+		background-color: #1e2939;
+	}
+
+	.offcanvas-header {
+		background-color: #1e2939;
+	}
+
+	.navbar-nav {
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.navbar-nav li {
+		list-style: none;
+		margin-right: 20px;
+	}
+
+	.navbar-nav li:last-child {
+		margin-right: 0;
+	}
+
+	.main-navigation {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.navbar-nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+
 }
