@@ -1,6 +1,5 @@
 <?php
 /**
- * 
  * The header for our theme
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
@@ -33,7 +32,7 @@
             <div id="dark-blue-div" class="dark-blue-header">
 
             </div>
-            <!-- navbar that sites below header and contains basically everything -->
+            <!-- navbar that sits below header and contains basically everything -->
             <nav class="navbar main-navigation">
                 <!-- full width container that spans entire viewport -->
                 <div class="container-fluid">
@@ -56,20 +55,12 @@
 
                         <!-- this column stores the logo img-->
                         <div class="col-auto">
-                            <?php if (has_custom_logo()): ?>
-                                <?php
-                                $custom_logo_id = get_theme_mod('custom_logo');
-                                $logo_image = wp_get_attachment_image_src($custom_logo_id, 'full');
-                                $logo_alt = get_post_meta($custom_logo_id, '_wp_attachment_image_alt', true);
-                                ?>
-                                <!-- important to set max height and width to auto so images can resize properly without ruining aspect ratio -->
-                                <img src="<?php echo esc_url($logo_image[0]); ?>" alt="<?php echo esc_attr($logo_alt); ?>"
-                                    style="max-height: 100px; width: auto;" class="img-fluid">
-                            <?php else: ?>
+                            <!-- updated to display user set wordpress header image-->
+                            <?php if (has_header_image()) : ?>
+                                <img src="<?php echo esc_url(get_header_image()); ?>" alt="<?php bloginfo('name'); ?>"style="max-height: 100px; width: auto;" class="img-fluid" class="img-fluid">
+                            <?php else : ?>
                                 <!-- placeholder/fallback logo which will by default be set as base theme logo until changed to something custom by user -->
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/U3A_logo.png"
-                                    alt="<?php bloginfo('name'); ?>" style="max-height: 100px; width: auto;"
-                                    class="img-fluid">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/U3A_logo.png" alt="<?php bloginfo('name'); ?>" style="max-height: 100px; width: auto;" class="img-fluid">
                             <?php endif; ?>
                         </div>
 
@@ -78,8 +69,8 @@
                             <?php
                             wp_nav_menu(
                                 array(
-                                    'theme_location' => 'primary-menu', 
-                                    'menu_class' => 'navbar-nav', 
+                                    'theme_location' => 'primary-menu',
+                                    'menu_class' => 'navbar-nav',
                                 )
                             );
                             ?>
@@ -112,4 +103,10 @@
                 </div>
             </div>
         </header>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <?php wp_footer(); ?>
+</body>
+
+</html>
