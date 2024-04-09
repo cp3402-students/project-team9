@@ -557,6 +557,16 @@ body .navbar-nav {
   align-items: center;
 }
 
+.main-navigation a {
+  display: block;
+  padding: 0px;
+  margin-right: 25px;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
 hr {
   background-color: #ccc;
   border: 0;
@@ -732,8 +742,8 @@ textarea {
 }
 .main-navigation a {
   display: block;
-  padding: 20px;
-  margin: 5px;
+  padding: 0px;
+  margin-right: 25px;
   font-size: large;
   font-weight: bold;
   color: white;
@@ -798,6 +808,16 @@ textarea {
   background-color: #023c5c !important;
   color: white;
   padding: 30px !important;
+}
+
+.main-navigation a {
+  display: block;
+  padding: 0px;
+  margin-right: 25px;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
 
 /* Posts and pages
