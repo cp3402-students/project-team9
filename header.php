@@ -17,10 +17,10 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
+    <!-- need to sort this out later too but was having difficulty getting styling from correct location -->
     <!-- include bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<!-- Fix later. Couldn't get styling to work in any of the other scss files.  -->
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
@@ -92,7 +92,7 @@
                     // offcanvas menu content
                     wp_nav_menu(
                         array(
-                            'theme_location' => 'primary-menu', // Replace 'primary-menu' with the menu location name or ID
+                            'theme_location' => 'primary-menu', // replace with name for offcanvas/secondary menu later when it's created
                             'menu_class' => 'navbar-nav',
                         )
                     );

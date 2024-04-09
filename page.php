@@ -14,25 +14,32 @@
 
 get_header();
 ?>
+<!-- need to move this styling, also might need to take the content-container div and move it over to content-page-->
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+    <?php
+    while (have_posts()):
+        the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+        // Start of the content container
+        echo '<div class="content-container">';
+        // Output the post/page content
+        the_content();
+        // End of the content container
+        echo '</div>';
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+        // If comments are open or we have at least one comment, load up the comment template.
+        if (comments_open() || get_comments_number()):
+            comments_template();
+        endif;
 
-		endwhile; // End of the loop.
-		?>
+    endwhile; // End of the loop.
+    ?>
 
-	</main><!-- #main -->
+</main><!-- #main -->
 
 <?php
 get_sidebar();
 get_footer();
+?>
