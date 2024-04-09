@@ -810,16 +810,6 @@ textarea {
   padding: 30px !important;
 }
 
-.main-navigation a {
-  display: block;
-  padding: 0px;
-  margin-right: 25px;
-  font-size: large;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
