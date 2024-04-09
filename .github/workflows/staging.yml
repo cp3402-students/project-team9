@@ -1,4 +1,4 @@
-name: Deploy Theme
+name: Deploy Theme and WordPress Pages
 
 on:
   push:
@@ -7,14 +7,15 @@ on:
 
 jobs:
   deploy:
-    name: Deploy Theme
+    name: Deploy Theme and WordPress Pages
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
-      - name: Deploy to server
+
+      # Transfer Theme Files to Staging Server
+      - name: Transfer Theme Files to Staging Server
         uses: easingthemes/ssh-deploy@v5.0.3
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -24,3 +25,16 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "/var/www/html/wordpress/wp-content/themes/project-team9"
           SCRIPT_BEFORE: ls
+      
+      # Transfer WordPress Pages to Staging Server
+      - name: Transfer WordPress Pages to Staging Server
+        uses: easingthemes/ssh-deploy@v5.0.3
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i"
+          SOURCE: "team9theme.wordpress.2024-04-09.000.xml"  
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: "/var/www/html/wordpress"
+          SCRIPT_BEFORE: |
+            mv team9theme.wordpress.2024-04-09.000.xml /var/www/html/wordpress
