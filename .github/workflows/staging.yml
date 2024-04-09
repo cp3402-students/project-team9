@@ -37,4 +37,16 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "/var/www/html/wordpress"
           SCRIPT_BEFORE: ls
+      
+      # Transfer Plugin Files to Staging Server
+      - name: Transfer Plugin Files to Staging Server
+        uses: easingthemes/ssh-deploy@v5.0.3
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i"
+          SOURCE: "./plugins"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: "/var/www/html/wordpress/wp-content/plugins"
+          SCRIPT_BEFORE: ls
 
