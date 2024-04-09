@@ -14,30 +14,36 @@
 
 get_header();
 ?>
-<!-- need to move this styling, also might need to take the content-container div and move it over to content-page-->
 
 <main id="primary" class="site-main">
+    <div class="custom-jumbotron">
+        <?php
+        // Output the jumbotron
+        display_custom_jumbotron();
+        ?>
+    </div>
 
-    <?php
-    while (have_posts()):
-        the_post();
+    <div class="content-container">
+        <?php
+        while (have_posts()):
+            the_post();
 
-        // Start of the content container
-        echo '<div class="content-container">';
-        // Output the post/page content
-        the_content();
-        // End of the content container
-        echo '</div>';
+            // Start of the content container
+            echo '<div class="content-container">';
+            // Output the post/page content
+            the_content();
+            // End of the content container
+            echo '</div>';
 
-        // If comments are open or we have at least one comment, load up the comment template.
-        if (comments_open() || get_comments_number()):
-            comments_template();
-        endif;
+            // If comments are open or we have at least one comment, load up the comment template.
+            if (comments_open() || get_comments_number()):
+                comments_template();
+            endif;
 
-    endwhile; // End of the loop.
-    ?>
-
-</main><!-- #main -->
+        endwhile; // End of the loop.
+        ?>
+    </div><!-- .content-container -->
+</main><!-- #primary -->
 
 <?php
 get_sidebar();
