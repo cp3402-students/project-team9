@@ -14,21 +14,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Install PHP and related dependencies
-      - name: Install PHP
-        run: sudo apt-get install php php-cli
+      # Change directory to WordPress installation
+      - name: Change directory to WordPress installation
+        run: cd /c/xampp/htdocs/wordpress/
 
-      # Install WP-CLI
-      - name: Install WP-CLI
-        run: |
-          curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-          chmod +x wp-cli.phar
-          sudo mv wp-cli.phar /usr/local/bin/wp
-
-      # Export WordPress pages locally
+      # Export WordPress pages
       - name: Export WordPress Pages
         run: |
-          wp export --path=/var/www/html/wordpress --post_type=page --post_status=publish --stdout > wordpress_pages.xml
+          wp export --path=. --post_type=page --post_status=publish --stdout > wordpress_pages.xml
 
       # Transfer Theme Files to Staging Server
       - name: Transfer Theme Files to Staging Server
@@ -41,7 +34,7 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "/var/www/html/wordpress/wp-content/themes/project-team9"
           SCRIPT_BEFORE: ls
-      
+
       # Transfer WordPress Pages to Staging Server
       - name: Transfer WordPress Pages to Staging Server
         uses: easingthemes/ssh-deploy@v5.0.3
