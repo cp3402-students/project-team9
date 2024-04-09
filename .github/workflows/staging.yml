@@ -37,3 +37,9 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "/var/www/html/wordpress"
           SCRIPT_BEFORE: ls
+
+      # Import WordPress Pages XML file using WP-CLI
+      - name: Import WordPress Pages
+        run: |
+          cd /var/www/html/wordpress
+          wp import team9theme.wordpress.2024-04-09.000.xml --authors=create
