@@ -20,6 +20,7 @@
     <!-- include bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+<!-- Fix later. Couldn't get styling to work in any of the other scss files.  -->
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
@@ -57,10 +58,10 @@
                         <div class="col-auto">
                             <!-- updated to display user set wordpress header image-->
                             <?php if (has_header_image()) : ?>
-                                <img src="<?php echo esc_url(get_header_image()); ?>" alt="<?php bloginfo('name'); ?>"style="max-height: 100px; width: auto;" class="img-fluid" class="img-fluid">
+                                <img src="<?php echo esc_url(get_header_image()); ?>" alt="<?php bloginfo('name'); ?>"style="max-height: 70px; width: auto;" class="img-fluid" class="img-fluid">
                             <?php else : ?>
                                 <!-- placeholder/fallback logo which will by default be set as base theme logo until changed to something custom by user -->
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/U3A_logo.png" alt="<?php bloginfo('name'); ?>" style="max-height: 100px; width: auto;" class="img-fluid">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/U3A_logo.png" alt="<?php bloginfo('name'); ?>" style="max-height: 70px; width: auto;" class="img-fluid">
                             <?php endif; ?>
                         </div>
 
@@ -69,7 +70,7 @@
                             <?php
                             wp_nav_menu(
                                 array(
-                                    'theme_location' => 'primary-menu',
+                                    'theme_location' => 'menu-1',
                                     'menu_class' => 'navbar-nav',
                                 )
                             );

@@ -456,8 +456,7 @@ big {
 
 /* Elements
 --------------------------------------------- */
-html,
-body {
+html, body {
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -477,10 +476,6 @@ body {
 body .site-header {
   background-color: #023c5c;
   min-height: 50px;
-}
-body .main-navigation {
-  background-color: #22547D !important;
-  color: white;
 }
 body .site-main {
   height: 100vh;
@@ -519,9 +514,6 @@ body .col-auto {
   display: flex;
   padding: 0;
 }
-body .nav-bar .nav-item {
-  display: flex;
-}
 body .navbar-nav .nav-link {
   display: flex;
   justify-content: center;
@@ -557,11 +549,6 @@ body .navbar-nav li {
 }
 body .navbar-nav li:last-child {
   margin-right: 0;
-}
-body .main-navigation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 body .navbar-nav {
   display: flex;
@@ -729,17 +716,15 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
-  display: block;
   width: 100%;
   background-color: #005480 !important;
 }
 .main-navigation ul {
-  display: none;
   list-style: none;
   margin: 0;
   padding-left: 0;
-  list-style: none;
   justify-content: center;
+  flex-direction: row !important;
 }
 .main-navigation li {
   position: relative;
@@ -748,9 +733,6 @@ textarea {
   display: block;
   padding: 20px;
   margin: 5px;
-  font-size: large;
-  font-weight: bold;
-  color: white;
   font-size: large;
   font-weight: bold;
   color: white;
@@ -767,6 +749,7 @@ textarea {
   }
   .main-navigation ul {
     display: flex;
+    flex-direction: row;
   }
 }
 .site-main .comment-navigation,
@@ -800,38 +783,6 @@ textarea {
   font-size: large !important;
   font-weight: bold !important;
   color: white !important;
-}
-
-.navbar-brand {
-  margin-left: 20px;
-}
-
-.navbar-nav .nav-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: white;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-  outline: none !important;
-  box-shadow: none !important;
-  border-color: transparent !important;
-}
-
-.navbar-toggler {
-  border-color: transparent !important;
-}
-
-.offcanvas-body {
-  background-color: #1e2939;
-}
-
-.offcanvas-header {
-  background-color: #1e2939;
 }
 
 .navbar-nav li a:hover {
