@@ -159,8 +159,8 @@ function display_custom_jumbotron() {
         echo '<div class="container-fluid py-5">';
         echo '<h1 class="display-5 fw-bold">Create an account</h1>';
         echo '<p class="col-md-8 fs-4 text-center">Place holder text for a login/sign up call to action.</p>';
-        echo '<button class="btn btn-primary btn-lg mr-2" type="button">Sign up</button>'; // Add custom class mr-2 for margin-right
-		echo '<button class="btn btn-primary btn-lg" type="button">Log in</button>';
+        echo '<a href="' . esc_url(home_url('/log-in')) . '" class="btn btn-primary btn-lg mr-2" role="button">Log In</a>'; // Link to the custom login page
+        echo '<a href="' . esc_url(home_url('/sign-up')) . '" class="btn btn-primary btn-lg" role="button">Sign Up</a>'; // Link to the custom sign-up page
         echo '</div>';
         echo '</div>';
     }

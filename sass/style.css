@@ -837,11 +837,11 @@ textarea {
 }
 
 .content-container {
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: auto;
   /* Remove or adjust padding properties as needed */
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 40px;
+  margin-top: 0px;
 }
 
 /* Comments
