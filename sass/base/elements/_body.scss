@@ -130,6 +130,30 @@ body {
     color: white;
     text-decoration: none;
 }
+body .offcanvas .navbar-nav {
+    display: flex !important;
+    text-decoration: none !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    /* Align items to the left */
+    padding-left: 0 !important;
+    /* Ensure there's no padding on the left */
+    text-align: left;
+}
+body .offcanvas .navbar-nav .nav-item {
+    width: 100%;
+}
+
+body .navbar-nav li {
+    list-style: none;
+    padding: 20px;
+}
+
+body .offcanvas .navbar-nav .nav-link {
+    text-decoration: none !important;
+    /* Removes underline from links */
+
+}
 
 
 

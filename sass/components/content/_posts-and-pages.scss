@@ -26,9 +26,19 @@
 // not sure if this is the right location for this might need to move later 
 .content-container {
     max-width: 1200px;
+	min-height: 100vh;
     margin: auto;
-    /* Remove or adjust padding properties as needed */
     padding: 40px;
 	margin-top: 0px;
+	background-color: white;
+}
+.outer-content-container {
+	background-color: #f8f9fa;
+	padding-top: 0px; /* Increase top padding */
+	padding-bottom: 0px; /* Keep bottom padding as it is */
+	padding-left: 0px; /* Keep left padding as it is */
+	padding-right: 0px; /* Keep right padding as it is */
+	margin-bottom: 0px; /* Add margin to separate from footer */
+    /* Additional styling as needed */
 }
 

@@ -570,6 +570,31 @@ body .navbar-nav {
   text-decoration: none;
 }
 
+body .offcanvas .navbar-nav {
+  display: flex !important;
+  text-decoration: none !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  /* Align items to the left */
+  padding-left: 0 !important;
+  /* Ensure there's no padding on the left */
+  text-align: left;
+}
+
+body .offcanvas .navbar-nav .nav-item {
+  width: 100%;
+}
+
+body .navbar-nav li {
+  list-style: none;
+  padding: 20px;
+}
+
+body .offcanvas .navbar-nav .nav-link {
+  text-decoration: none !important;
+  /* Removes underline from links */
+}
+
 hr {
   background-color: #ccc;
   border: 0;
@@ -602,6 +627,16 @@ dt {
 
 dd {
   margin: 0 1.5em 1.5em;
+}
+
+ol,
+ul {
+  padding-left: 0px !important;
+}
+
+ul,
+ol {
+  margin: 0 !important;
 }
 
 /* Make sure embeds and iframes fit their containers. */
@@ -813,6 +848,13 @@ textarea {
   padding: 30px !important;
 }
 
+.navbar-nav li a {
+  font-size: large !important;
+  font-weight: bold !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -843,10 +885,21 @@ textarea {
 
 .content-container {
   max-width: 1200px;
+  min-height: 100vh;
   margin: auto;
-  /* Remove or adjust padding properties as needed */
   padding: 40px;
   margin-top: 0px;
+  background-color: white;
+}
+
+.outer-content-container {
+  background-color: #f8f9fa;
+  padding-top: 0px; /* Increase top padding */
+  padding-bottom: 0px; /* Keep bottom padding as it is */
+  padding-left: 0px; /* Keep left padding as it is */
+  padding-right: 0px; /* Keep right padding as it is */
+  margin-bottom: 0px; /* Add margin to separate from footer */
+  /* Additional styling as needed */
 }
 
 /* Comments
