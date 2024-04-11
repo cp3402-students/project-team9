@@ -23,7 +23,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), 'Team 9', '<a href="https://automattic.com/">Beau Williams, David McDonald & Nathan Stevens</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), 'Team 9', '<a href="https://github.com/cp3402-students/project-team9">Beau Williams, David McDonald & Nathan Stevens</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
