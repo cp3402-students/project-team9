@@ -8,7 +8,7 @@ and their content such as posts. The document will also provide some insight and
 A brief overview of what the pages are, we have the Home page, About Us, Contact, and others. These can be identified in the Navigation bar at the top of the page. Each page is primarily used for static content and
 can be arranged in any order you would like.
 
-#### Adding Pages
+### Adding Pages
 To begin adding a new page:
 * Navigate to the Wordpress dashboard
 * Click on "Pages" in the sidebar menu
@@ -20,7 +20,7 @@ To begin adding a new page:
 ##### What Are Posts?
 The purpose of posts is to create dynamic content like news updates, blogs, or events. They can be arranged by date or alphabetically and can be assigned categories and tags to make navigation easier.
 
-#### Adding Posts
+### Adding Posts
 To begin adding a new post:
 * Navigate to the Wordpress Dashboard
 * Click on "Posts" in the sidebar menu
