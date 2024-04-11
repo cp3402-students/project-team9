@@ -151,22 +151,6 @@ function _s_scripts() {
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
-//custom function to call jumbotron call to action on homepage
-function display_custom_jumbotron() {
-    // Check if the user is on the home page and not logged in
-    if (is_front_page() && !is_user_logged_in()) {
-        echo '<div class="p-5 mb-4 bg-light rounded-3">';
-        echo '<div class="container-fluid py-5">';
-        echo '<h1 class="display-5 fw-bold">Create an account</h1>';
-        echo '<p class="col-md-8 fs-4 text-center">Place holder text for a login/sign up call to action.</p>';
-        echo '<a href="' . esc_url(home_url('/log-in')) . '" class="btn btn-primary btn-lg mr-2" role="button">Log In</a>'; // Link to the custom login page
-        echo '<a href="' . esc_url(home_url('/sign-up')) . '" class="btn btn-primary btn-lg" role="button">Sign Up</a>'; // Link to the custom sign-up page
-        echo '</div>';
-        echo '</div>';
-    }
-}
-
-
 /**
  * Implement the Custom Header feature.
  */
