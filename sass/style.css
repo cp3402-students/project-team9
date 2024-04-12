@@ -403,6 +403,11 @@ h6 {
   clear: both;
 }
 
+.h1, h1 {
+  font-size: 2.5rem;
+  padding: 40px;
+}
+
 p {
   margin: 10px;
 }
@@ -456,11 +461,12 @@ big {
 
 /* Elements
 --------------------------------------------- */
-html,
-body {
-  height: 100vh;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
   font-family: var(--bs-body-font-family);
 }
 
@@ -478,13 +484,6 @@ body .site-header {
   background-color: #023c5c;
   min-height: 50px;
 }
-body .main-navigation {
-  background-color: #22547D !important;
-  color: white;
-}
-body .site-main {
-  height: 100vh;
-}
 body .site-main .container-fluid {
   text-align: center;
 }
@@ -498,13 +497,13 @@ body .site-main .container-fluid .col-md-8 .fs-4 {
   padding: 10px;
 }
 body .site-footer {
-  height: 100px;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: auto;
   text-align: center;
-  background-color: #e0e3e8;
+  background-color: #f8f9fa;
 }
 body .navbar-brand {
   margin-left: 20px;
@@ -518,9 +517,6 @@ body .col {
 body .col-auto {
   display: flex;
   padding: 0;
-}
-body .nav-bar .nav-item {
-  display: flex;
 }
 body .navbar-nav .nav-link {
   display: flex;
@@ -558,15 +554,45 @@ body .navbar-nav li {
 body .navbar-nav li:last-child {
   margin-right: 0;
 }
-body .main-navigation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 body .navbar-nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main-navigation a {
+  display: block;
+  padding: 0px;
+  margin-right: 25px;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+body .offcanvas .navbar-nav {
+  display: flex !important;
+  text-decoration: none !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  /* Align items to the left */
+  padding-left: 0 !important;
+  /* Ensure there's no padding on the left */
+  text-align: left;
+}
+
+body .offcanvas .navbar-nav .nav-item {
+  width: 100%;
+}
+
+body .navbar-nav li {
+  list-style: none;
+  padding: 20px;
+}
+
+body .offcanvas .navbar-nav .nav-link {
+  text-decoration: none !important;
+  /* Removes underline from links */
 }
 
 hr {
@@ -601,6 +627,16 @@ dt {
 
 dd {
   margin: 0 1.5em 1.5em;
+}
+
+ol,
+ul {
+  padding-left: 0px !important;
+}
+
+ul,
+ol {
+  margin: 0 !important;
 }
 
 /* Make sure embeds and iframes fit their containers. */
@@ -729,28 +765,23 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
-  display: block;
   width: 100%;
-  background-color: #005480 !important;
+  background-color: #22547d !important;
 }
 .main-navigation ul {
-  display: none;
   list-style: none;
   margin: 0;
   padding-left: 0;
-  list-style: none;
   justify-content: center;
+  flex-direction: row !important;
 }
 .main-navigation li {
   position: relative;
 }
 .main-navigation a {
   display: block;
-  padding: 20px;
-  margin: 5px;
-  font-size: large;
-  font-weight: bold;
-  color: white;
+  padding: 0px;
+  margin-right: 25px;
   font-size: large;
   font-weight: bold;
   color: white;
@@ -767,6 +798,7 @@ textarea {
   }
   .main-navigation ul {
     display: flex;
+    flex-direction: row;
   }
 }
 .site-main .comment-navigation,
@@ -792,7 +824,7 @@ textarea {
 }
 
 .navbar {
-  background-color: #005581 !important;
+  background-color: #22547d !important;
   color: white;
 }
 
@@ -800,38 +832,6 @@ textarea {
   font-size: large !important;
   font-weight: bold !important;
   color: white !important;
-}
-
-.navbar-brand {
-  margin-left: 20px;
-}
-
-.navbar-nav .nav-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: white;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-  outline: none !important;
-  box-shadow: none !important;
-  border-color: transparent !important;
-}
-
-.navbar-toggler {
-  border-color: transparent !important;
-}
-
-.offcanvas-body {
-  background-color: #1e2939;
-}
-
-.offcanvas-header {
-  background-color: #1e2939;
 }
 
 .navbar-nav li a:hover {
@@ -846,6 +846,13 @@ textarea {
   background-color: #023c5c !important;
   color: white;
   padding: 30px !important;
+}
+
+.navbar-nav li a {
+  font-size: large !important;
+  font-weight: bold !important;
+  color: white !important;
+  text-decoration: none !important;
 }
 
 /* Posts and pages
@@ -874,6 +881,25 @@ textarea {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.content-container {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 40px;
+  margin-top: 0px;
+  background-color: white;
+}
+
+.outer-content-container {
+  background-color: #f8f9fa;
+  padding-top: 0px; /* Increase top padding */
+  padding-bottom: 0px; /* Keep bottom padding as it is */
+  padding-left: 0px; /* Keep left padding as it is */
+  padding-right: 0px; /* Keep right padding as it is */
+  margin-bottom: 0px; /* Add margin to separate from footer */
+  /* Additional styling as needed */
 }
 
 /* Comments
