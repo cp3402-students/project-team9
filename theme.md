@@ -42,8 +42,8 @@ The following files are the files you will most likely need to make changes to w
 * **functions.php** - This controls all of the main functions used in the project. If you wish to add a custom function, it will need to be added here. 
 
 **.SCSS Files**
-* **_body.scss** -
-* **_navigation.scss**
+* **_body.scss** - This is where all the attributes for styling body content are stored.
+* **_navigation.scss** - This is where all the attributes for styling the navigation bar are stored. 
 
 ## Colours: 
 As stated previously, the theme was developed for a client. The client provided all of the content for the site, including images, logos, content for courses, etc. As a result, we went with a colour scheme that closely resembled that of the original site, and complimented the site logo(s) that the client provided. 

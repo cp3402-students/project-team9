@@ -53,10 +53,8 @@ Once this has been done, launch your IDE of choice --> select 'Open Folder' and 
 
 ## Testing
 **Testing Procedures**
-Testing is conducted in the developers local development environment first.
-
-Any bugs encountered during deployment to staging are to be documented so they can be ironed out/resolved before deployment to production. 
-
+Testing is conducted in the developers local development environment. 
+Any bugs encountered during deployment to staging are to be documented so they can be ironed out/resolved before pushing to production. 
 
 ## Automation/Deployment
 Whenever a push is made to the staging branch of a developers fork, the staging.yml file in './github/workflows/' runs. The script in this file makes use of the GitHub Action [ssh deploy](https://github.com/marketplace/actions/ssh-deploy); which essentially deploys whatever file/directory is specified, to a folder on the staging server via rsync over ssh, using NodeJS. Currently, the staging.yml script deploys both the Team 9 theme directory, as well as an .xml export of the entire WordPress site. 
