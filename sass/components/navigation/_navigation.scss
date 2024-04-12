@@ -1,7 +1,7 @@
 // Need to clean this up and remove unnecessary styling/incorrectly referenced elements
 .main-navigation {
     width: 100%;
-    background-color: #22547d !important;
+    background-color: $color_background-nav !important;
     
     ul {
         list-style: none;
@@ -76,7 +76,7 @@
 }
 
 .navbar {
-    background-color: #22547d !important;
+    background-color: $color_background-nav !important;
     color: white;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .dark-blue-header {
-    background-color: #023c5c !important;
+    background-color: $color_background-header !important;
     color: white;
     padding: 30px !important;
 }
