@@ -17,7 +17,6 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
-    <!-- need to sort this out later too but was having difficulty getting styling from correct location -->
     <!-- include bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -45,7 +44,7 @@
                             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                                 aria-label="Toggle navigation">
-                                <!-- change colour of offcanvas menu button to white -->
+                                <!-- neccessary in order to change colour of offcanvas menu button to white -->
                                 <svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
                                     fill="#fff" class="bi bi-list" viewBox="0 0 16 16"
                                     style="font-weight: bold; stroke: none;">
