@@ -3,7 +3,7 @@ name: Deploy Theme and WordPress Pages to Production
 on:
   push:
     branches:
-      - main  # Assuming 'main' is your production branch
+      - production  # Assuming 'main' is your production branch
 
 jobs:
   deploy:

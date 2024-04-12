@@ -83,26 +83,6 @@
                     </div>
                 </div>
             </nav>
-
-            <!-- offcanvas sidebar menu -->
-            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <?php
-                    // offcanvas menu content
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'primary-menu', // replace with name for offcanvas/secondary menu later when it's created
-                            'menu_class' => 'navbar-nav',
-                        )
-                    );
-                    ?>
-                </div>
-            </div>
         </header>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
