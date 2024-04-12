@@ -21,7 +21,7 @@ body {
     background-color: white;
 
     .site-header {
-        background-color: #023c5c;
+        background-color: $color_background-header;
         min-height: 50px;
     }
 
@@ -92,11 +92,11 @@ body {
     }
 
     .offcanvas-body {
-        background-color: #1e2939;
+        background-color: $color_background-offcanvas;
     }
 
     .offcanvas-header {
-        background-color: #1e2939;
+        background-color: $color_background-offcanvas;
     }
 
     .navbar-nav {
