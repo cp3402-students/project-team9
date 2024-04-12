@@ -32,7 +32,7 @@ jobs:
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc -i"
-          SOURCE: "./team9theme.wordpress.2024-04-09.000.xml"  
+          SOURCE: "./team9theme.WordPress.2024-04-12.xml"  
           REMOTE_HOST: ${{ secrets.PRODUCTION_REMOTE_HOST }}  # Ensure this points to your production server
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "/var/www/html/wordpress"
