@@ -1,139 +1,159 @@
-//need to clean this up and remove/move unnecessary elements at some point
-html,
-body {
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	font-family: var(--bs-body-font-family);
+// Need to clean this up and remove/move unnecessary elements at some point
+// dont forget to fix up all the hardcoded colours.
+html, body {
+
+    height:100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--bs-body-font-family);
 }
 
 body .col {
-	display: inline-grid;
+    display: inline-grid;
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
 
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	background-color: white;
+    .site-header {
+        background-color: #023c5c;
+        min-height: 50px;
+    }
 
-	.site-header {
-		background-color: #023c5c;
-		min-height: 50px;
+    .site-main {
+    
+        .container-fluid {
+            text-align: center;
 
-	}
+            .col-md-8 {
+                margin-bottom: 25px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
 
-	.main-navigation {
-		background-color: #22547D !important;
-		color: white;
-	}
+                .fs-4 {
+                    padding: 10px;
+                }
+            }
+        }
+    }
 
-	.site-main {
-		height: 100vh;
+    .site-footer {
 
-		.container-fluid {
-			text-align: center;
+        min-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto;
+        text-align: center;
+        background-color: #f8f9fa;
+    }
 
-			.col-md-8 {
-				margin-bottom: 25px;
-				margin-left: auto;
-				margin-right: auto;
-				text-align: left;
+    .navbar-brand {
+        margin-left: 20px;
+    }
 
-				.fs-4 {
-					padding: 10px;
-				}
-			}
-		}
-	}
+    .row {
+        width: max-content;
+    }
 
-	.site-footer {
-		height: 100px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-top: auto;
-		text-align: center;
-		background-color: #e0e3e8;
-	}
+    .col {
+        display: flex;
+    }
 
-	.navbar-brand {
-		margin-left: 20px;
-	}
+    .col-auto {
+        display: flex;
+        padding: 0;
+    }
 
-	.row {
-		width: max-content;
-	}
+    .navbar-nav .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: white;
+    }
 
-	.col {
-		display: flex;
-	}
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: transparent !important;
+    }
 
-	.col-auto {
-		display: flex;
-		padding: 0;
-	}
+    .navbar-toggler {
+        border-color: transparent !important;
+    }
 
-	.nav-bar .nav-item {
-		display: flex;
-	}
+    .offcanvas-body {
+        background-color: #1e2939;
+    }
 
-	.navbar-nav .nav-link {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		color: white;
-	}
+    .offcanvas-header {
+        background-color: #1e2939;
+    }
 
-	.navbar-toggler:focus,
-	.navbar-toggler:active,
-	.navbar-toggler-icon:focus {
-		outline: none !important;
-		box-shadow: none !important;
-		border-color: transparent !important;
-	}
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0;
+    }
 
-	.navbar-toggler {
-		border-color: transparent !important;
-	}
+    .navbar-nav li {
+        list-style: none;
+        margin-right: 20px;
+    }
 
-	.offcanvas-body {
-		background-color: #1e2939;
-	}
+    .navbar-nav li:last-child {
+        margin-right: 0;
+    }
 
-	.offcanvas-header {
-		background-color: #1e2939;
-	}
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.main-navigation a {
+    display: block;
+    padding: 0px;
+    margin-right: 25px;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+body .offcanvas .navbar-nav {
+    display: flex !important;
+    text-decoration: none !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    /* Align items to the left */
+    padding-left: 0 !important;
+    /* Ensure there's no padding on the left */
+    text-align: left;
+}
+body .offcanvas .navbar-nav .nav-item {
+    width: 100%;
+}
 
-	.navbar-nav {
-		display: flex;
-		justify-content: center;
-		margin: 0 auto;
-		padding: 0;
-	}
+body .navbar-nav li {
+    list-style: none;
+    padding: 20px;
+}
 
-	.navbar-nav li {
-		list-style: none;
-		margin-right: 20px;
-	}
-
-	.navbar-nav li:last-child {
-		margin-right: 0;
-	}
-
-	.main-navigation {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.navbar-nav {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
+body .offcanvas .navbar-nav .nav-link {
+    text-decoration: none !important;
+    /* Removes underline from links */
 
 }
+
+
+

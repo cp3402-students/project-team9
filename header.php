@@ -1,6 +1,5 @@
 <?php
 /**
- * 
  * The header for our theme
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
@@ -18,8 +17,10 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
+    <!-- need to sort this out later too but was having difficulty getting styling from correct location -->
     <!-- include bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body <?php body_class(); ?>>
@@ -33,7 +34,7 @@
             <div id="dark-blue-div" class="dark-blue-header">
 
             </div>
-            <!-- navbar that sites below header and contains basically everything -->
+            <!-- navbar that sits below header and contains basically everything -->
             <nav class="navbar main-navigation">
                 <!-- full width container that spans entire viewport -->
                 <div class="container-fluid">
@@ -54,23 +55,19 @@
                             </button>
                         </div>
 
-                        <!-- this column stores the logo img-->
                         <div class="col-auto">
-                            <?php if (has_custom_logo()): ?>
-                                <?php
-                                $custom_logo_id = get_theme_mod('custom_logo');
-                                $logo_image = wp_get_attachment_image_src($custom_logo_id, 'full');
-                                $logo_alt = get_post_meta($custom_logo_id, '_wp_attachment_image_alt', true);
-                                ?>
-                                <!-- important to set max height and width to auto so images can resize properly without ruining aspect ratio -->
-                                <img src="<?php echo esc_url($logo_image[0]); ?>" alt="<?php echo esc_attr($logo_alt); ?>"
-                                    style="max-height: 100px; width: auto;" class="img-fluid">
-                            <?php else: ?>
-                                <!-- placeholder/fallback logo which will by default be set as base theme logo until changed to something custom by user -->
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/U3A_logo.png"
-                                    alt="<?php bloginfo('name'); ?>" style="max-height: 100px; width: auto;"
-                                    class="img-fluid">
-                            <?php endif; ?>
+                            <!-- Wrap the logo image inside an anchor tag -->
+                            <a href="<?php echo esc_url(home_url('/')); ?>">
+                                <?php if (has_header_image()): ?>
+                                    <img src="<?php echo esc_url(get_header_image()); ?>" alt="<?php bloginfo('name'); ?>"
+                                        style="max-height: 70px; width: auto;" class="img-fluid">
+                                <?php else: ?>
+                                    <!-- Placeholder/fallback logo which will be displayed if no header image is set -->
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/U3A_logo.png"
+                                        alt="<?php bloginfo('name'); ?>" style="max-height: 70px; width: auto;"
+                                        class="img-fluid">
+                                <?php endif; ?>
+                            </a>
                         </div>
 
                         <!-- this column is used to store all wordpress nav menu items-->
@@ -78,8 +75,8 @@
                             <?php
                             wp_nav_menu(
                                 array(
-                                    'theme_location' => 'primary-menu', 
-                                    'menu_class' => 'navbar-nav', 
+                                    'theme_location' => 'menu-1',
+                                    'menu_class' => 'navbar-nav',
                                 )
                             );
                             ?>
@@ -100,16 +97,20 @@
                     // offcanvas menu content
                     wp_nav_menu(
                         array(
-                            'theme_location' => 'primary-menu', // Replace 'primary-menu' with the menu location name or ID
+                            'theme_location' => 'primary-menu', // replace with name for offcanvas/secondary menu later when it's created
                             'menu_class' => 'navbar-nav',
                         )
                     );
                     ?>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </header>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <?php wp_footer(); ?>
+</body>
+
+</html>

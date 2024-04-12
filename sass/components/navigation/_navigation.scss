@@ -1,45 +1,39 @@
-//need to clean this up and remove unnecessary styling/incorrectly referenced elements
+// Need to clean this up and remove unnecessary styling/incorrectly referenced elements
 .main-navigation {
-    display: block;
     width: 100%;
-    background-color: #005480 !important;
-
+    background-color: #22547d !important;
+    
     ul {
-        display: none;
         list-style: none;
         margin: 0;
         padding-left: 0;
-        list-style: none;
         justify-content: center;
-
+        flex-direction: row !important;
     }
 
     li {
         position: relative;
 
-        &:hover>a,
-        &.focus>a {
+        &:hover > a,
+        &.focus > a {
            
         }
     }
 
     a {
         display: block;
-        padding: 20px;
-        margin: 5px;
-        font-size: large;
-        font-weight: bold;
-        color: white;
+        padding: 0px;
+        margin-right: 25px;
         font-size: large;
         font-weight: bold;
         color: white;
         text-decoration: none;
     }
 
-    .current_page_item>a,
-    .current-menu-item>a,
-    .current_page_ancestor>a,
-    .current-menu-ancestor>a {
+    .current_page_item > a,
+    .current-menu-item > a,
+    .current_page_ancestor > a,
+    .current-menu-ancestor > a {
        
     }
 }
@@ -56,6 +50,7 @@
 
     .main-navigation ul {
         display: flex;
+        flex-direction: row;
     }
 }
 
@@ -81,47 +76,14 @@
 }
 
 .navbar {
-    background-color: #005581 !important;
+    background-color: #22547d !important;
     color: white;
-
 }
 
 .navbar-nav li a {
     font-size: large !important;
     font-weight: bold !important;
     color: white !important;
-}
-
-.navbar-brand {
-    margin-left: 20px;
-}
-
-.navbar-nav .nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: white;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    outline: none !important;
-    box-shadow: none !important;
-    border-color: transparent !important;
-}
-
-.navbar-toggler {
-    border-color: transparent !important;
-}
-
-.offcanvas-body {
-    background-color: #1e2939;
-}
-
-.offcanvas-header {
-    background-color: #1e2939;
 }
 
 .navbar-nav li a:hover {
@@ -136,4 +98,10 @@
     background-color: #023c5c !important;
     color: white;
     padding: 30px !important;
+}
+.navbar-nav li a {
+    font-size: large !important;
+    font-weight: bold !important;
+    color: white !important;
+    text-decoration: none !important;
 }
