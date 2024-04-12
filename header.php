@@ -39,21 +39,6 @@
                 <div class="container-fluid">
                     <!-- This div contains the entire row -->
                     <div class="row align-items-center">
-                        <!-- offcanvas button -->
-                        <div class="col">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                                aria-label="Toggle navigation">
-                                <!-- change colour of offcanvas menu button to white -->
-                                <svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
-                                    fill="#fff" class="bi bi-list" viewBox="0 0 16 16"
-                                    style="font-weight: bold; stroke: none;">
-                                    <path fill-rule="evenodd"
-                                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                                </svg>
-                            </button>
-                        </div>
-
                         <div class="col-auto">
                             <!-- Wrap the logo image inside an anchor tag -->
                             <a href="<?php echo esc_url(home_url('/')); ?>">
@@ -83,26 +68,6 @@
                     </div>
                 </div>
             </nav>
-
-            <!-- offcanvas sidebar menu -->
-            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <?php
-                    // offcanvas menu content
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'primary-menu', // replace with name for offcanvas/secondary menu later when it's created
-                            'menu_class' => 'navbar-nav',
-                        )
-                    );
-                    ?>
-                </div>
-            </div>
         </header>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

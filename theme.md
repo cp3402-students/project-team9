@@ -27,12 +27,6 @@ This process is how you will make styling to changes to the theme:
 
 Because the Team 9 theme utilizes Sass, you will need to make sure you have some sort of a compiler installed. Team 9 recommends you use the 'Live Sass Compiler' extension that is avaliable in Visual Studio Code. Once this is installed, look in the bottom right of your VS Code window and select the option 'Watch Sass'. While the compiler is 'watching...'. whenever you make a change to a _.scss file, the compiler will compile your changes and apply them to the style.css file in the ./sass directory. Without some sort of a compiler, you will be making changes and you won't ever be able to see them.
 
-Additional Information:
-
-There is a custom function in the 'functions.php' file which displays a Bootsrap jumbtron on the home page, if the user is not logged in. The jumbotron is simply a call to action, designed to get more users to sign up to the site. This was created as the client stated that membership registrations was one of the their main goals with the site re-work. 
-
-If you wish to disable the jumbotron, simply comment it out, or delete the function 'display_custom_jumbotron()' entirely. Alternatively, you can remove the function call in the 'page.php' file and it will no longer be displayed.
-
 ## Template Files
 The following files are the files you will most likely need to make changes to when working on the theme:
 
@@ -45,7 +39,7 @@ The following files are the files you will most likely need to make changes to w
 
 * **single.php** - This controls the layout of the individual blog posts of custom post types, specifying how their content is structured and displayed. 
 
-* **functions.php** - 
+* **functions.php** - This controls all of the main functions used in the project. If you wish to add a custom function, it will need to be added here. 
 
 **.SCSS Files**
 * **_body.scss** -

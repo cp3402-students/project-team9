@@ -781,7 +781,8 @@ textarea {
 .main-navigation a {
   display: block;
   padding: 0px;
-  margin-right: 25px;
+  margin-left: 30px;
+  margin-right: 0px;
   font-size: large;
   font-weight: bold;
   color: white;
