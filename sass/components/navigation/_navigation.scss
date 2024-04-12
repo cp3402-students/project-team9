@@ -1,0 +1,107 @@
+.main-navigation {
+    width: 100%;
+    background-color: $color_background-nav !important;
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        justify-content: center;
+        flex-direction: row !important;
+    }
+
+    li {
+        position: relative;
+
+        &:hover > a,
+        &.focus > a {
+           
+        }
+    }
+
+    a {
+        display: block;
+        padding: 0px;
+        margin-left: 30px;
+        margin-right: 0px;
+        font-size: large;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+    .current_page_item > a,
+    .current-menu-item > a,
+    .current_page_ancestor > a,
+    .current-menu-ancestor > a {
+       
+    }
+}
+
+.menu-toggle,
+.main-navigation.toggled ul {
+    display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .main-navigation ul {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+    .site-main & {
+        margin: 0 0 1.5em;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .nav-previous {
+        flex: 1 0 50%;
+    }
+
+    .nav-next {
+        text-align: end;
+        flex: 1 0 50%;
+    }
+}
+
+.navbar {
+    background-color: $color_background-nav !important;
+    color: white;
+}
+
+.navbar-nav li a {
+    font-size: large !important;
+    font-weight: bold !important;
+    color: white !important;
+}
+
+.navbar-nav li a:hover {
+    color: #f0f0f0;
+}
+
+.offcanvas-body .navbar-nav li a:hover {
+    color: #f0f0f0;
+}
+
+.dark-blue-header {
+    background-color: $color_background-header !important;
+    color: white;
+    padding: 30px !important;
+}
+.navbar-nav li a {
+    font-size: large !important;
+    font-weight: bold !important;
+    color: white !important;
+    text-decoration: none !important;
+}

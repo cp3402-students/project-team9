@@ -1,0 +1,39 @@
+name: Deploy Theme and WordPress Pages to Production
+
+on:
+  push:
+    branches:
+      - production  # Assuming 'main' is your production branch
+
+jobs:
+  deploy:
+    name: Deploy Theme and WordPress Pages to Production
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Transfer Theme Files to Production Server
+      - name: Transfer Theme Files to Production Server
+        uses: easingthemes/ssh-deploy@v5.0.3
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i"
+          SOURCE: "./"
+          REMOTE_HOST: ${{ secrets.PRODUCTION_REMOTE_HOST }}  # Update this to your production server's host
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}  # Update this to your production server's user
+          TARGET: "/var/www/html/wordpress/wp-content/themes/project-team9"
+          SCRIPT_BEFORE: ls  # Optional, remove or modify as needed
+
+      # Transfer WordPress Pages to Production Server
+      - name: Transfer WordPress Pages to Production Server
+        uses: easingthemes/ssh-deploy@v5.0.3
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i"
+          SOURCE: "./team9theme.WordPress.2024-04-12.xml"  
+          REMOTE_HOST: ${{ secrets.PRODUCTION_REMOTE_HOST }}  # Ensure this points to your production server
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: "/var/www/html/wordpress"
+          SCRIPT_BEFORE: ls  # Optional, remove or modify as needed
