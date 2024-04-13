@@ -1,21 +1,21 @@
 #CP4302 team 9 Project WordPress site for U3A
 
-##URL: <link>
+##URL: http://20.255.57.69/wordpress/
 
 ##Overview
 
 This project repo is for an online U3A course site made in wordpress. The main purpose of this site is to get users to sign up to the U3A and access course materials. Other features of the site include various pages with links to helpful resources for current or future U3A students. These resources include the gems magazine, Links to websites that allow users to find local U3A sites and links to resources for Elderly students. Comment section forums have been implemented on course pages to allow students to discuss course materials as part of the client requirements
 
 ##Hosting
-The website is hosted on Azure, documentation for hosting and deployment can be found here: <URL>
+The website is hosted on Azure, documentation for hosting and deployment can be found here: https://github.com/cp3402-students/project-team9/blob/main/deployment.md
 
 ##Theme
 
-The site was developed using a custom developed based of the _s starter theme, documentation for the theme development can be found here: <URL>
+The site was developed using a custom developed based of the _s starter theme, documentation for the theme development can be found here: https://github.com/cp3402-students/project-team9/blob/main/theme.md
 
 ##Site 
 
-Documentation on the site functionality and the plugins used can be found here: <URL> 
+Documentation on the site functionality and the plugins used can be found here: https://github.com/cp3402-students/project-team9/blob/main/site.md
 
 ##Authors
 
